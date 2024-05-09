@@ -247,7 +247,6 @@ You can find the reference [docker-compose.yml](https://github.com/thingsboard/t
 and corresponding [documentation](https://github.com/thingsboard/thingsboard/blob/master/docker/README.md) that will help you to run ThingsBoard containers in a cluster mode 
 (although on a single host machine)
 
-TODO: 2.5  
 
 {% highlight yaml %}
 version: '3.0'
