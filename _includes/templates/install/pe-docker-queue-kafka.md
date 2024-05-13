@@ -41,7 +41,7 @@ services:
     volumes:
       - kafka-data:/bitnami
   mytbpe:
-    restart: alwaysthingsboard
+    restart: always
     image: "thingsboard/tb-pe:{{ site.release.pe_full_ver }}"
     depends_on:
       - kafka
