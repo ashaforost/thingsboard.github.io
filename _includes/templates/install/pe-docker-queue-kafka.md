@@ -41,7 +41,7 @@ services:
     volumes:
       - kafka-data:/bitnami
   mytbpe:
-    restart: always
+    restart: alwaysthingsboard
     image: "thingsboard/tb-pe:{{ site.release.pe_full_ver }}"
     depends_on:
       - kafka
@@ -53,7 +53,7 @@ services:
     environment:
       TB_QUEUE_TYPE: kafka
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
-      TB_KAFKA_SERVERS: kafka:9092
+      TB_KAFKA_SERVERS: kafka:9094
       TB_LICENSE_SECRET: PUT_YOUR_LICENSE_SECRET_HERE
       TB_LICENSE_INSTANCE_DATA_FILE: /data/license.data
     volumes:

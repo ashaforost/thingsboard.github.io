@@ -24,7 +24,7 @@ services:
     environment:
       ALLOW_PLAINTEXT_LISTENER: "yes"
       KAFKA_CFG_LISTENERS: "OUTSIDE://:9092,CONTROLLER://:9093,INSIDE://:9094"
-      KAFKA_CFG_ADVERTISED_LISTENERS: "OUTSIDE://localhost:9092,INSIDE://kafka:9094"
+      KAFKA_CFG_ADVERTISED_LISTENERS: "OUTSIDE://kafka:9092,INSIDE://kafka:9094"
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: "INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT,CONTROLLER:PLAINTEXT"
       KAFKA_CFG_INTER_BROKER_LISTENER_NAME: "INSIDE"
       KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "false"
@@ -53,7 +53,7 @@ services:
       - "5683-5688:5683-5688/udp"
     environment:
       TB_QUEUE_TYPE: kafka
-      TB_KAFKA_SERVERS: kafka:9092
+      TB_KAFKA_SERVERS: kafka:9094
     volumes:
       - mytb-data:/data
       - mytb-logs:/var/log/thingsboard
